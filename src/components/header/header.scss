@@ -1,0 +1,71 @@
+.container{
+  position: relative;
+}
+.App-header {
+  position: fixed;
+  width: 90%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  top: 35px;
+  left: 50%;
+  right: 50%;
+  transform:translate(-50%, -50%);
+  z-index: 2;
+
+
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .rounded {
+    border: 1px solid blue;
+  }
+
+  .nav {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    font-size: 26px;
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+      align-self: center;
+    }
+
+  }
+
+  .burger-menu {
+    background-color: rgb(10, 21, 70);
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    font-weight: 900;
+    font-size: 25px;
+    transform: rotate(90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12px;
+  }
+
+}
+
+/* RESPONSIVE */
+/* 992px  - 1200px */
+@media screen and (max-width: 1200px) {
+  .App-header {
+.nav{
+  display: none;
+}
+.logo {
+  width: 70px;
+}
+a{
+  align-self: center;
+}
+
+  }
+}

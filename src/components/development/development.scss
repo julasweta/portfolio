@@ -1,0 +1,46 @@
+.development {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+
+    li {
+      padding: 20px;
+      list-style: none;
+
+      a {
+        color: black;
+        animation: changeUl 5s;
+      }
+    }
+
+    @keyframes changeUl {
+      0% {
+        color: rgb(231, 20, 20)
+      }
+
+      50% {
+        color: rgb(83, 20, 231)
+      }
+    }
+  }
+
+  hr {
+    background-color: cyan;
+  }
+
+}
+
+/* RESPONSIVE */
+/* 992px  - 1200px */
+@media screen and (max-width: 1200px) {
+  .development{
+    padding-top: 70px;
+  }
+
+
+}

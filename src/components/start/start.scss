@@ -1,0 +1,122 @@
+.start{
+padding-top: 100px;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+  .rainbow {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 80vh;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -2;
+      left: -50%;
+      top: -50%;
+      width: 200%;
+      height: 200%;
+      background-color: #89a2c9;
+      background-repeat: no-repeat;
+      background-size: 50% 50%, 50% 50%;
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+      background-image: linear-gradient(#399953, #399953), linear-gradient(#d884bf, #c593aa), linear-gradient(#504197, #9277be), linear-gradient(#16e6f5, #377af5);
+      animation: rotate 6s linear infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 6px;
+      top: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
+      background: rgb(6, 56, 122);
+      border-radius: 5px;
+      animation: opacityChange 7s infinite alternate;
+    }
+
+
+  }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.conic {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 70vh;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -60%;
+    top: -90%;
+    width: 300%;
+    height: 300%;
+    background-color: #1a232a;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: conic-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%);
+    animation: rotate 8s linear infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100%);
+    height: calc(100%);
+    background: rgb(6, 60, 131);
+    border-radius: 5px;
+  }
+}
+
+.conic-demo::after {
+  animation: opacityChange 5s infinite linear;
+}
+
+@keyframes opacityChange {
+  50% {
+    opacity: .2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+  h2 {
+    color: rgb(250, 240, 240);
+     position: absolute;
+     text-align: center;
+     top: 50%;
+     right: 50%;
+     transform: translate(50%, -50%)
+  }
+
+}

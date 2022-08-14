@@ -5,9 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: visible;
+  -webkit-backface-visibility: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* RESPONSIVE */
+/* 992px  - 1200px */
+@media screen and (max-width: 1200px) {
+
+
+
 }
