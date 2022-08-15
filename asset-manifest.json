@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.2bffb3fe.css",
-    "main.js": "/portfolio/static/js/main.c9901a55.js",
+    "main.js": "/portfolio/static/js/main.d4826d1c.js",
     "static/media/logo.jpg": "/portfolio/static/media/logo.b798a798751a09a6f880.jpg",
     "static/media/viber.png": "/portfolio/static/media/viber.d72d9a6b532d2f5b4b23.png",
     "index.html": "/portfolio/index.html",
     "main.2bffb3fe.css.map": "/portfolio/static/css/main.2bffb3fe.css.map",
-    "main.c9901a55.js.map": "/portfolio/static/js/main.c9901a55.js.map"
+    "main.d4826d1c.js.map": "/portfolio/static/js/main.d4826d1c.js.map"
   },
   "entrypoints": [
     "static/css/main.2bffb3fe.css",
-    "static/js/main.c9901a55.js"
+    "static/js/main.d4826d1c.js"
   ]
 }
