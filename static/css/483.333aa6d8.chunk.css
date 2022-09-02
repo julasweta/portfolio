@@ -1,0 +1,2 @@
+.development{display:flex;flex-direction:column;padding-top:100px}.development ul{display:flex;justify-content:space-around;padding:0}.development ul li{list-style:none;padding:20px}.development ul li a{-webkit-animation:changeUl 5s;animation:changeUl 5s;color:#000}@-webkit-keyframes changeUl{0%{color:#e71414}50%{color:#5314e7}}@keyframes changeUl{0%{color:#e71414}50%{color:#5314e7}}.development hr{background-color:aqua}@media screen and (max-width:1200px){.development{padding-top:70px}}
+/*# sourceMappingURL=483.333aa6d8.chunk.css.map*/
