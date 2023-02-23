@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/987.ffc01068.chunk.css","mappings":"AAAA,aACI,cAEH,QAEE,UADA,cACA","sources":["components/modal/modal.scss"],"sourcesContent":[".input-color {\r\n    color: #f53607\r\n }\r\n .result{\r\n   font-size: 18px;\r\n   color: red;\r\n }\r\n"],"names":[],"sourceRoot":""}
