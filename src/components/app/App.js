@@ -49,7 +49,7 @@ const App = (props) => {
     <Router>
       <>
         <Helmet>
-          <title>My Title</title>
+          <title>Portfolio</title>
         </Helmet>
       </>
       <>
