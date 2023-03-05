@@ -4,9 +4,9 @@ let info = {
       id: 1,
       name: "Portfolio",
       short: "Portfolio -  сайт для ознайомлення з продукцією та можливостями вашої компанії",
-      img: "https://d16yj43vx3i1f6.cloudfront.net/uploads/2020/06/GettyImages-182475239-CROP.jpg",
+      imgfull: "full_frontend",
       screen: "",
-      imgfull: "/img/site1full.png",
+      img: "frontend",
       homepage: "https://julasweta.github.io/frontendhtml/",
     },
     {
@@ -14,7 +14,8 @@ let info = {
       name: "Market Site",
       short: "Pizza - Сайт онлайн магазину",
       screen: "",
-      imgfull: "/img/scrinpizaa2.png",
+      img: "pizza2",
+      imgfull: "full_pizza2",
       homepage: "https://julasweta.github.io/pizza2/",
     },
     {
@@ -22,10 +23,20 @@ let info = {
       name: "Corporate",
       short:
         "Приклад  створення окремої сторінки для обліку працівників",
-      img: "https://d16yj43vx3i1f6.cloudfront.net/uploads/2020/06/GettyImages-182475239-CROP.jpg",
+      img: "amountworkers",
       screen: "",
-      imgfull: "/img/amountworkers.png",
+      imgfull: "full_amountworkers",
       homepage: "https://julasweta.github.io/myreact/",
+    },
+    {
+      id: 4,
+      name: "Corporate",
+      short:
+        "Сайт компанії по розробці мебельної фурнітури",
+      img: "furniture",
+      screen: "",
+      imgfull: "full_furniture",
+      homepage: "https://julasweta.github.io/furniture/",
     },
   ],
 };

@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  IndexRoute,
 } from "react-router-dom";
 import Header from "../header/Header";
 import Start from "../start/Start";

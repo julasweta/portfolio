@@ -1,16 +1,15 @@
 import "../development/development-all.scss";
 import "./portfolio.scss";
-import { NavLink  } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import SingleSite from "./singleSite/SingleSite";
 import { useState } from "react";
 
 const Portfolio = (props) => {
-
   const [idPost, setPost] = useState(1);
 
   const getIdPost = (id) => {
-setPost(idPost=> id)
-  }
+    setPost(id);
+  };
 
   const hoverOn = (e) => {
     let id = e.target.parentElement.parentElement.dataset.key;
@@ -36,9 +35,13 @@ setPost(idPost=> id)
           {" "}
           <NavLink to="single/" onClick={() => getIdPost(item.id)}>
             <div className="site_name">{item.name}</div>
+
             <img
-              src={item.imgfull}
-              alt={item.name}
+              src={
+                process.env.PUBLIC_URL +
+                `/images/${item.img}.png`
+              }
+              alt="My Image"
               onMouseOver={hoverOn}
               onMouseOut={hoverOut}
             />
