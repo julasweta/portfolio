@@ -1,15 +1,22 @@
-import "../development/development-all.scss";
-import "./portfolio.scss";
+
 import { NavLink } from "react-router-dom";
 import SingleSite from "./singleSite/SingleSite";
 import { useState } from "react";
+import "./portfolio.scss";
+import "../development/development-all.scss";
+
 
 const Portfolio = (props) => {
   const [idPost, setPost] = useState(1);
-
+  const [activeBoard, setActiveBoard] = useState(1);
   const getIdPost = (id) => {
     setPost(id);
   };
+
+ const onActiveBoard = (id) => {
+setActiveBoard(id);
+getIdPost(id)
+ }
 
   const hoverOn = (e) => {
     let id = e.target.parentElement.parentElement.dataset.key;
@@ -31,9 +38,9 @@ const Portfolio = (props) => {
     const items = arr.map((item, index) => {
       // записуємо кожний пост
       return (
-        <li key={item.id} className="site" data-key={item.id}>
+        <li key={item.id} className= {`site ${activeBoard  === item.id && 'active-board'}`} data-key={item.id}>
           {" "}
-          <NavLink to="single/" onClick={() => getIdPost(item.id)}>
+          <NavLink to="single/" onClick={() => onActiveBoard(item.id)}>
             <div className="site_name">{item.name}</div>
 
             <img

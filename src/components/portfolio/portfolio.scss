@@ -34,10 +34,28 @@
           20px 20px 0px 0px #CAE6FF,
           25px 25px 0px 0px #E1EEFF,
           5px 5px 15px 5px rgba(0, 0, 0, 0);
+          padding-top: 20px;
+          background-color: gray;
+          &:hover{
+            box-shadow: 5px 5px 0px 0px #a3d1f0,
+            10px 10px 0px 0px #9fcaee,
+            15px 15px 0px 0px #A1D8FF,
+            20px 20px 0px 0px #d1e4f7,
+            25px 25px 0px 0px #E1EEFF,
+            5px 5px 15px 5px rgba(225, 238, 245, 0);
+            background-color: rgb(156, 205, 232);
+          }
+          a{
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+          }
+          &:hover{
+            color: rgb(44, 179, 161);
+          }
 
           .site_name{
-            height: 40%;
-            padding-top: 20px;
+            height: 45px !important;
           }
           img {
              width: 100%;
@@ -67,5 +85,9 @@ from{
 animation: active_img 2s;
 }
 
+
+.active-board{
+background-color: rgb(5, 65, 50) !important;
+}
 
 }

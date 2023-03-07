@@ -3,7 +3,7 @@ let info = {
     {
       id: 1,
       name: "Portfolio",
-      short: "Portfolio -  сайт для ознайомлення з продукцією та можливостями вашої компанії",
+      short: "Portfolio -  сайт-візитка HTML-Developer",
       imgfull: "full_frontend",
       screen: "",
       img: "frontend",

@@ -11,7 +11,7 @@ const Modalmy = (props) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    site: '',
+    site: 'Corporate',
   });
 
 
@@ -20,31 +20,21 @@ const Modalmy = (props) => {
   }
   const [errors, setErrors] = useState({});
 
-    // Початковий стан
-    useEffect(() => {
-      handleClose()
-    }, []);
 
   // Функція для обробки введення даних форми
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormData((prevState) => ({ ...prevState, [name]: value }));
+    setFormData( {...formData, [name]: value });
   };
 
   // Функція для валідації даних форми
   const validateFormData = () => {
     let validationErrors = {};
     if (validator.isEmpty(formData.name)) {
-      validationErrors.name = 'Name is required';
+      validationErrors.name = 'Ви не ввели Імя';
     }
-    if (!validator.isEmail(formData.email)) {
-      validationErrors.email = 'Please enter a valid email';
-    }
-    if (!validator.isLength(formData.password, { min: 6 })) {
-      validationErrors.password = 'Password must be at least 6 characters';
-    }
-    if (!validator.equals(formData.password, formData.confirmPassword)) {
-      validationErrors.confirmPassword = 'Passwords do not match';
+    if (!phoneRegex.test(formData.phone)) {
+      validationErrors.phone = 'Phone number is invalid';
     }
     setErrors(validationErrors);
     return Object.keys(validationErrors).length === 0;
@@ -55,10 +45,13 @@ const Modalmy = (props) => {
       event.preventDefault();
       if (validateFormData()) {
         console.log(formData);
+        handleClose();
+        alert('Дякуємо, очікуйте на дзвінок')
       }
+     
     };
 
-
+    const phoneRegex = /^0\d{2}\d{3}\d{4}$/;
 
   return (
    <>
@@ -88,17 +81,17 @@ const Modalmy = (props) => {
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Ваш номер телефону</Form.Label>
               <Form.Control
-                type="tell"
-                name = "tell"
+                type="tel"
+                name = "phone"
                 value={formData.phone}
-                placeholder="Телефон"
+                placeholder="формат - 097 000 00 00"
                 className="form-phone"
                 onChange={handleInputChange}
               />
             </Form.Group>{" "}
             <FormGroup>
               <label>
-                Виберіть формат сайту Ви розглядаєте:
+                Виберіть формат сайту, який Ви розглядаєте:
                 <select onChange={handleInputChange}>
                   <option value="Corporate">Корпоративний</option>
                   <option value="CardSite">Сайт Візитка</option>
@@ -106,7 +99,14 @@ const Modalmy = (props) => {
                 </select>
               </label>
             </FormGroup>
-            {errors.confirmPassword && <div>{errors.confirmPassword}</div>}
+            <div style={{color:'red'}}>{errors.phone}</div>
+            <div style={{color:'red'}}>{errors.name}</div>
+          
+            <br></br>
+            <Button variant="primary"  type="submit">
+            {" "}
+            Відправити{" "}
+          </Button>{" "}
           </Form>{" "}
         </Modal.Body>{" "}
         <Modal.Footer>
@@ -116,10 +116,7 @@ const Modalmy = (props) => {
             Close{" "}
           </Button>{" "}
 
-          <Button variant="primary"  type="submit">
-            {" "}
-            Відправити{" "}
-          </Button>{" "}
+         
         </Modal.Footer>{" "}
       </Modal>{" "}
     </>
