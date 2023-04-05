@@ -2,6 +2,13 @@ import "../development-all.scss";
 import "./cardsite.scss";
 
 const Cardsite = (props) => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    const targetId = event.target.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="cardsite">
       <div className="container">
@@ -28,7 +35,7 @@ const Cardsite = (props) => {
         </div>
       </div>
       {/*  */}
-      <a className="arrow" href="#info-detail">
+      <a className="arrow" href="#info-detail" onClick={handleClick}>
         Детально...
       </a>
       <div className="info-detail" id="info-detail">
@@ -65,7 +72,7 @@ const Cardsite = (props) => {
             </div>
           </div>
         </div>
-        <a className="arrow" href="#steps">
+        <a className="arrow" href="#steps" onClick={handleClick}>
           Етапи створення...
         </a>
       </div>

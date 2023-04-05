@@ -1,5 +1,6 @@
 import "../development/development-all.scss";
 import "./support.scss";
+import { Link } from "react-router-dom";
 
 const Support = (props) => {
   return (
@@ -12,7 +13,10 @@ const Support = (props) => {
               Вартість: <strong>300$</strong>
             </div>
             <h2>Технічна підтримка сайту</h2>
-            <button className="order">Замовити проект</button>
+            <Link to="/modal">
+              <button className="order">Замовити проект</button>
+             
+            </Link>
           </div>
           <div className="text">
             <p>

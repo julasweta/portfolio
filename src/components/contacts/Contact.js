@@ -2,6 +2,7 @@ import React from 'react'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 
+
 function Contact() {
 
   const containerStyle = {
@@ -21,19 +22,23 @@ function Contact() {
   return (
     
 
-    <LoadScript
-      googleMapsApiKey="AIzaSyBBflJ1A_NCnKcmEWf1z7xkU2LGA0-QcYk"
-    >
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={17}
-        visible={true}
+    <div>
+      <LoadScript
+        googleMapsApiKey="AIzaSyBBflJ1A_NCnKcmEWf1z7xkU2LGA0-QcYk"
       >
-        <Marker onLoad={onLoad} position={center}  />
-        <></>
-      </GoogleMap>
-    </LoadScript>
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={17}
+          visible={true}
+        >
+          <Marker onLoad={onLoad} position={center}  />
+          <></>
+        </GoogleMap>
+      </LoadScript>
+  
+
+    </div>
   )
 }
 

@@ -3,35 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://julasweta.github.io/portfolio/",
+  "request": "2.88.2",
   "dependencies": {
     "@react-google-maps/api": "^2.18.1",
-    "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "axios-jsonp": "^1.0.4",
     "bootstrap": "^5.2.0",
-    "fs": "^0.0.1-security",
+    "browserify": "^17.0.0",
+    "cors": "^2.8.5",
     "gh-pages": "^5.0.0",
+    "google-api-client": "^2.1.0",
+    "google-auth-library": "^8.7.0",
     "google-map-react": "^2.2.0",
+    "google-spreadsheet": "^3.3.0",
+    "googleapis": "^114.0.0",
+    "jsonp": "^0.2.1",
     "mongodb": "^4.8.1",
     "mongoose": "^6.5.2",
-    "node-polyfill-webpack-plugin": "^2.0.1",
     "os-browserify": "^0.3.0",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-animations": "^1.0.0",
     "react-app-rewired": "^2.2.1",
+    "react-axios": "^2.0.6",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
-    "react-form-validator-core": "^1.1.2",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
     "redis-server": "^1.2.2",
     "sass": "^1.54.0",
     "styled-components": "^5.3.8",
     "utils": "^0.3.1",
-    "validator": "^13.9.0",
-    "web-vitals": "^2.1.4"
+    "validator": "^13.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -60,6 +65,14 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^18.7.1"
+    "@types/node": "^18.7.1",
+    "http-proxy-middleware": "^2.0.6",
+    "https-browserify": "^1.0.0",
+    "install": "^0.13.0",
+    "npm": "^9.6.3",
+    "react-scripts": "^5.0.1"
+  },
+  "resolutions": {
+    "https": "https-browserify"
   }
 }

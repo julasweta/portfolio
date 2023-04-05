@@ -1,0 +1,64 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdown__button:hover {
+    background-color: #aaa;
+  }
+  
+  .dropdown__button_open {
+    background-color: #aaa;
+  }
+  
+  .dropdown__menu {
+    
+    position: absolute;
+    top: 10%;
+    right: 80%;
+    width: fit-content;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+    padding: 10px;
+      /* Додаємо плавну анімацію */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  transform: rotate(55deg);
+  }
+  
+  .dropdown__menu_open {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+      /* Змінюємо властивості, коли меню відкрите */
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(0deg);
+  }
+  
+  .menu__item {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .menu__item:hover {
+    background-color: #eee;
+  }
+  

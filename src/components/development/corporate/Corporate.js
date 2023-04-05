@@ -1,6 +1,14 @@
 import "./corporate.scss";
 
 const Corporate = (props) => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    const targetId = event.target.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
     <div className="corporate">
       <div className="container">
@@ -25,7 +33,7 @@ const Corporate = (props) => {
         </div>
       </div>
       {/*  */}
-      <a className="arrow" href="#info-detail">
+      <a className="arrow" href="#info-detail" onClick={handleClick}>
         Детально...
       </a>
       <div className="info-detail" id="info-detail">

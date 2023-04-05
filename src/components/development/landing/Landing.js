@@ -3,6 +3,14 @@ import "./landing.scss";
 import { Link } from "react-router-dom";
 
 const Landing = (props) => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    const targetId = event.target.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
     <div className="landing">
       <div className="container">
@@ -30,7 +38,7 @@ const Landing = (props) => {
           </div>
         </div>
       </div>
-      <a className="arrow" href="#info-detail">
+      <a className="arrow" href="#info-detail" onClick={handleClick}>
         Детально...
       </a>
       <div className="info-detail" id="info-detail">
@@ -64,6 +72,55 @@ const Landing = (props) => {
                   За допомогою лендінгу, ви можете запускати нові продукти чи
                   послуги окремо від основного сайту.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a className="arrow" href="#steps" onClick={handleClick}>
+          Етапи створення...
+        </a>
+
+          {/*  */}
+      <div className="steps" id="steps">
+        <div className="container">
+          <div className="steps-wrap d-flex">
+            <div className="steps-item">
+              <div className="steps-level"></div>
+              <div className="steps-text">
+                <h3>Аналіз</h3>
+                <p>
+                  Досліджуємо тематику вашого бізнесу, аналізуємо конкурентів.
+                </p>
+              </div>
+            </div>
+            <div className="steps-item ">
+              <div className="steps-level"></div>
+              <div className="steps-text">
+                <h3>Дизайн</h3>
+                <p>
+                  Розробляємо дизайн, який залишає яскраве враження про
+                  компанію.
+                </p>
+              </div>
+            </div>
+
+            <div className="steps-item ">
+              <div className="steps-level"></div>
+              <div className="steps-text">
+                <h3>Розробка</h3>
+                <p>
+                  Робимо сайт з інтерактивним дизайном, динамічними елементами і
+                  адаптивною версткою.
+                </p>
+              </div>
+            </div>
+
+            <div className="steps-item ">
+              <div className="steps-level"></div>
+              <div className="steps-text">
+                <h3>Запуск</h3>
+                <p>Підтримуємо сайт, допомагаємо управляти контентом.</p>
               </div>
             </div>
           </div>

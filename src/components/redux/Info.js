@@ -1,14 +1,16 @@
 let info = {
   sites: [
-    {
+      {
       id: 1,
-      name: "Portfolio",
-      short: "Portfolio -  сайт-візитка HTML-Developer",
-      imgfull: "full_frontend",
+      name: "Смачно.tyt",
+      short:
+        "Цей проект є веб-додатком, що надає користувачам доступ до різноманітних рецептів, з можливістю авторизації та додавання рецептів в улюблені.",
+      img: "portal",
       screen: "",
-      img: "frontend",
-      homepage: "https://julasweta.github.io/frontendhtml/",
+      imgfull: "full_portal",
+      homepage: "https://julasweta.github.io/portal/",
     },
+ 
     {
       id: 2,
       name: "Market Site",
@@ -37,6 +39,16 @@ let info = {
       screen: "",
       imgfull: "full_furniture",
       homepage: "https://julasweta.github.io/furniture/",
+    },
+  
+    {
+      id: 5,
+      name: "Portfolio",
+      short: "Portfolio -  сайт-візитка HTML-Developer",
+      imgfull: "full_frontend",
+      screen: "",
+      img: "frontend",
+      homepage: "https://julasweta.github.io/frontendhtml/",
     },
   ],
 };

@@ -1,8 +1,10 @@
 import "./header.scss";
-import { Button } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import Logo from '../../resource/logo.jpg';
 import { NavLink } from "react-router-dom";
+import MobileMenu from "../mobile/MobileMenu";
+import { useEffect, useState } from "react";
+
 
 let active = {
   color: "rgb(81 200 245)",
@@ -12,6 +14,17 @@ let disactive = {
 };
 const Header = (props) => {
 
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 600px)").matches);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
+    const handleMediaChange = (e) => setIsMobile(e.matches);
+    mediaQuery.addListener(handleMediaChange);
+    return () => {
+      mediaQuery.removeListener(handleMediaChange);
+    };
+  }, []);
+
   return (
     <div className="container">
       <header className="App-header">
@@ -19,7 +32,7 @@ const Header = (props) => {
           <Image src={Logo} className="logo rounded"></Image>
         </NavLink>
 
-        <div className="nav">
+{!isMobile &&  <div className="nav">
           <NavLink
             to="/development"
             style={({ isActive }) => (isActive ? active : disactive)}
@@ -47,8 +60,10 @@ const Header = (props) => {
           >
             Контакти
           </NavLink>
-        </div>
-        <Button className="burger-menu">|||</Button>
+        </div>}
+       
+        
+        <MobileMenu></MobileMenu>
       </header>
     </div>
   );

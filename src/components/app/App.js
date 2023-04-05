@@ -1,6 +1,6 @@
 import "./App.scss";
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -46,7 +46,7 @@ window.addEventListener("scroll", function (e) {
 
 const App = (props) => {
   return (
-    <Router>
+    <HashRouter>
       <>
         <Helmet>
           <title>Portfolio</title>
@@ -75,7 +75,7 @@ const App = (props) => {
         <Route path="/support" element={<Support />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
-    </Router>
+    </HashRouter>
   );
 };
 

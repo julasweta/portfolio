@@ -48,7 +48,7 @@ getIdPost(id)
                 process.env.PUBLIC_URL +
                 `/images/${item.img}.png`
               }
-              alt="My Image"
+              alt="site"
               onMouseOver={hoverOn}
               onMouseOut={hoverOut}
             />
