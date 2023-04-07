@@ -17,6 +17,7 @@ import { Helmet } from "react-helmet";
 import Modalmy from "../modal/Modalmy";
 import info from "../redux/Info";
 import SingleSite from "../portfolio/singleSite/SingleSite";
+import AdminPanel from './AdminPanel';
 
 
 
@@ -55,6 +56,7 @@ const App = (props) => {
       <>
         <div className="App">
           <Header />
+          <AdminPanel />
         </div>
       </>
       <Routes>

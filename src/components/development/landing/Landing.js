@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "../development-all.scss";
 import "./landing.scss";
 import { Link } from "react-router-dom";
@@ -10,6 +11,22 @@ const Landing = (props) => {
     targetElement.scrollIntoView({ behavior: "smooth" });
   };
 
+  //перевіряємо розмір вікна
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+ 
 
   return (
     <div className="landing">
@@ -41,6 +58,7 @@ const Landing = (props) => {
       <a className="arrow" href="#info-detail" onClick={handleClick}>
         Детально...
       </a>
+
       <div className="info-detail" id="info-detail">
         <div className="container">
           <h2>Які завдання вирішує Landing page?</h2>
@@ -77,12 +95,13 @@ const Landing = (props) => {
           </div>
         </div>
       </div>
-      <a className="arrow" href="#steps" onClick={handleClick}>
+      {windowWidth > 600 && <a className="arrow" href="#steps" onClick={handleClick}>
           Етапи створення...
-        </a>
+        </a>}
 
-          {/*  */}
-      <div className="steps" id="steps">
+          {windowWidth > 600 && 
+         
+          <div className="steps" id="steps">
         <div className="container">
           <div className="steps-wrap d-flex">
             <div className="steps-item">
@@ -125,7 +144,8 @@ const Landing = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
+     
     </div>
   );
 };

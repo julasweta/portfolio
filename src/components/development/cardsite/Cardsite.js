@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "../development-all.scss";
 import "./cardsite.scss";
 
@@ -8,6 +9,21 @@ const Cardsite = (props) => {
     const targetElement = document.querySelector(targetId);
     targetElement.scrollIntoView({ behavior: "smooth" });
   };
+
+   //перевіряємо розмір вікна
+   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+   useEffect(() => {
+     function handleResize() {
+       setWindowWidth(window.innerWidth);
+     }
+ 
+     window.addEventListener('resize', handleResize);
+ 
+     return () => {
+       window.removeEventListener('resize', handleResize);
+     };
+   }, []);
 
   return (
     <div className="cardsite">
@@ -72,13 +88,12 @@ const Cardsite = (props) => {
             </div>
           </div>
         </div>
-        <a className="arrow" href="#steps" onClick={handleClick}>
+       {windowWidth > 600 &&  <a className="arrow" href="#steps" onClick={handleClick}>
           Етапи створення...
-        </a>
+        </a>}
       </div>
 
-      {/*  */}
-      <div className="steps" id="steps">
+      {windowWidth > 600 &&  <div className="steps" id="steps">
         <div className="container">
           <div className="steps-wrap d-flex">
             <div className="steps-item">
@@ -121,7 +136,8 @@ const Cardsite = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
+     
     </div>
   );
 };

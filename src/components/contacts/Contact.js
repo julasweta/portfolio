@@ -1,14 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 
 
 function Contact() {
+   //перевіряємо розмір вікна
+   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const containerStyle = {
-    width: '700px',
-    height: '700px'
-  };
+   useEffect(() => {
+     function handleResize() {
+       setWindowWidth(window.innerWidth);
+     }
+ 
+     window.addEventListener('resize', handleResize);
+ 
+     return () => {
+       window.removeEventListener('resize', handleResize);
+     };
+   }, []); 
+
+   const sizeMap = windowWidth > 720? '700px' : '320px'
+   
+    const containerStyle = {
+  width: sizeMap,
+  height: sizeMap
+};
   
   const center = {
     lat: 49.81673,

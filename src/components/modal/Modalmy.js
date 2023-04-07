@@ -1,4 +1,3 @@
-
 import "./modal.scss";
 import { useState } from "react";
 import { FormGroup } from "react-bootstrap";
@@ -6,8 +5,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
-import { JWT } from 'google-auth-library';
-import https from 'https';
 
 
 
@@ -52,42 +49,6 @@ const Modalmy = (props) => {
 
  
 
-  ////////////
-  const SHEET_ID = '1yYNspQE26aoGKAwZajZ_1ea62TzpOMvk3bWaGy-A4kM';
-  const SHEET_NAME = 'portfolio';
-  
-  const spreadsheetId = SHEET_ID;
-  const range = `${SHEET_NAME}!A1:C1`;
-  
-  const sendToGoogleSheets = async (data) => {
-    const jwtClient = new JWT({
-      email: 'SERVICE_ACCOUNT_EMAIL',
-      key: 'SERVICE_ACCOUNT_PRIVATE_KEY',
-      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-    });
-  
-    try {
-      await jwtClient.authorize();
-      const accessToken = jwtClient.credentials.access_token;
-  
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}:append?valueInputOption=USER_ENTERED`;
-  
-      const headers = {
-        'Authorization': `Bearer ${accessToken}`,
-        'Content-Type': 'application/json'
-      };
-  
-      const body = {
-        values: [[data.name, data.site, data.email]]
-      };
-  
-      const response = await axios.post(url, body, { headers });
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
 
   // Функція для обробки подання форми
   const handleSubmit = (event) => {
@@ -97,13 +58,10 @@ const Modalmy = (props) => {
       //GOOGLE
       // https://habr.com/ru/company/skillfactory/blog/544866/ - інструкція через інший сайт
       console.log(formData);
-  /*     axios.post('https://sheet.best/api/sheets/906b6fa6-8326-417c-bcbc-9b3acad382a5', formData)
+     axios.post('https://sheet.best/api/sheets/906b6fa6-8326-417c-bcbc-9b3acad382a5', formData)
     .then(response => {
       console.log(response);
-    }) */
-    sendToGoogleSheets(formData);
-
-      
+    }) 
     
     
       
