@@ -1,10 +1,8 @@
-
 import { NavLink } from "react-router-dom";
 import SingleSite from "./singleSite/SingleSite";
 import { useState } from "react";
 import "./portfolio.scss";
 import "../development/development-all.scss";
-
 
 const Portfolio = (props) => {
   const [idPost, setPost] = useState(1);
@@ -13,10 +11,10 @@ const Portfolio = (props) => {
     setPost(id);
   };
 
- const onActiveBoard = (id) => {
-setActiveBoard(id);
-getIdPost(id)
- }
+  const onActiveBoard = (id) => {
+    setActiveBoard(id);
+    getIdPost(id);
+  };
 
   const hoverOn = (e) => {
     let id = e.target.parentElement.parentElement.dataset.key;
@@ -38,16 +36,17 @@ getIdPost(id)
     const items = arr.map((item, index) => {
       // записуємо кожний пост
       return (
-        <li key={item.id} className= {`site ${activeBoard  === item.id && 'active-board'}`} data-key={item.id}>
+        <li
+          key={item.id}
+          className={`site ${activeBoard === item.id && "active-board"}`}
+          data-key={item.id}
+        >
           {" "}
           <NavLink to="single/" onClick={() => onActiveBoard(item.id)}>
             <div className="site_name">{item.name}</div>
 
             <img
-              src={
-                process.env.PUBLIC_URL +
-                `/images/${item.img}.png`
-              }
+              src={process.env.PUBLIC_URL + `/images/${item.img}.png`}
               alt="site"
               onMouseOver={hoverOn}
               onMouseOut={hoverOut}

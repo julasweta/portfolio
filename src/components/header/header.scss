@@ -1,4 +1,4 @@
-.container{
+.container {
   position: relative;
 }
 .App-header {
@@ -10,9 +10,8 @@
   top: 35px;
   left: 50%;
   right: 50%;
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
-
 
   .logo {
     width: 120px;
@@ -34,7 +33,6 @@
       text-decoration: none;
       align-self: center;
     }
-
   }
 
   .burger-menu {
@@ -50,22 +48,20 @@
     justify-content: center;
     padding-bottom: 12px;
   }
-
 }
 
 /* RESPONSIVE */
 /* 992px  - 1200px */
 @media screen and (max-width: 1200px) {
   .App-header {
-.nav{
- /*  display: none; */
-}
-.logo {
-  width: 70px;
-}
-a{
-  align-self: center;
-}
-
+    .nav {
+      /*  display: none; */
+    }
+    .logo {
+      width: 70px;
+    }
+    a {
+      align-self: center;
+    }
   }
 }

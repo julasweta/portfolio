@@ -6,8 +6,6 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 
-
-
 const Modalmy = (props) => {
   const [show, setShow] = useState(true);
   const [formData, setFormData] = useState({
@@ -47,9 +45,6 @@ const Modalmy = (props) => {
     return Object.keys(validationErrors).length === 0;
   };
 
- 
-
-
   // Функція для обробки подання форми
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -58,13 +53,14 @@ const Modalmy = (props) => {
       //GOOGLE
       // https://habr.com/ru/company/skillfactory/blog/544866/ - інструкція через інший сайт
       console.log(formData);
-     axios.post('https://sheet.best/api/sheets/906b6fa6-8326-417c-bcbc-9b3acad382a5', formData)
-    .then(response => {
-      console.log(response);
-    }) 
-    
-    
-      
+      axios
+        .post(
+          "https://sheet.best/api/sheets/906b6fa6-8326-417c-bcbc-9b3acad382a5",
+          formData,
+        )
+        .then((response) => {
+          console.log(response);
+        });
 
       handleClose();
       alert("Дякуємо, очікуйте на дзвінок");

@@ -1,6 +1,6 @@
 let info = {
   sites: [
-      {
+    {
       id: 1,
       name: "Смачно.tyt",
       short:
@@ -10,7 +10,7 @@ let info = {
       imgfull: "full_portal",
       homepage: "https://julasweta.github.io/portal/",
     },
- 
+
     {
       id: 2,
       name: "Market Site",
@@ -22,25 +22,23 @@ let info = {
     },
     {
       id: 3,
-      name: "Corporate",
-      short:
-        "Приклад  створення окремої сторінки для обліку працівників",
-      img: "amountworkers",
+      name: "Portfolio",
+      short: "Сайт Портфоліо 3D Дизайнер Інтер'єру",
+      img: "julides",
       screen: "",
-      imgfull: "full_amountworkers",
-      homepage: "https://julasweta.github.io/myreact/",
+      imgfull: "full_julides",
+      homepage: "https://julasweta.github.io/julides/",
     },
     {
       id: 4,
       name: "Corporate",
-      short:
-        "Сайт компанії по розробці мебельної фурнітури",
+      short: "Сайт компанії по розробці мебельної фурнітури",
       img: "furniture",
       screen: "",
       imgfull: "full_furniture",
       homepage: "https://julasweta.github.io/furniture/",
     },
-  
+
     {
       id: 5,
       name: "Portfolio",

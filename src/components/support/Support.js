@@ -15,7 +15,6 @@ const Support = (props) => {
             <h2>Технічна підтримка сайту</h2>
             <Link to="/modal">
               <button className="order">Замовити проект</button>
-             
             </Link>
           </div>
           <div className="text">

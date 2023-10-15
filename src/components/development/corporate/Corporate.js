@@ -8,7 +8,6 @@ const Corporate = (props) => {
     targetElement.scrollIntoView({ behavior: "smooth" });
   };
 
-
   return (
     <div className="corporate">
       <div className="container">

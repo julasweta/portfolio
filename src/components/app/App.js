@@ -1,9 +1,5 @@
 import "./App.scss";
-import {
-  HashRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Header from "../header/Header";
 import Start from "../start/Start";
 import Development from "../development/Development";
@@ -17,9 +13,6 @@ import { Helmet } from "react-helmet";
 import Modalmy from "../modal/Modalmy";
 import info from "../redux/Info";
 import SingleSite from "../portfolio/singleSite/SingleSite";
-import AdminPanel from './AdminPanel';
-
-
 
 /* scroll animation for Landing/Corporate/CardSite  */
 window.addEventListener("scroll", function (e) {
@@ -32,17 +25,17 @@ window.addEventListener("scroll", function (e) {
     }
   });
 
-    let studioTexts = document.querySelectorAll(".studio-text");
-    studioTexts.forEach((item) => {
-      if (
-        document.documentElement.scrollTop > 500 &&
-        document.documentElement.scrollTop < 1000
-      ) {
-        item.style.animation = "steps_jup 3s";
-      } else {
-        item.style.animation = "none";
-      }
-    });
+  let studioTexts = document.querySelectorAll(".studio-text");
+  studioTexts.forEach((item) => {
+    if (
+      document.documentElement.scrollTop > 500 &&
+      document.documentElement.scrollTop < 1000
+    ) {
+      item.style.animation = "steps_jup 3s";
+    } else {
+      item.style.animation = "none";
+    }
+  });
 });
 
 const App = (props) => {
@@ -56,7 +49,6 @@ const App = (props) => {
       <>
         <div className="App">
           <Header />
-          <AdminPanel />
         </div>
       </>
       <Routes>
@@ -69,10 +61,7 @@ const App = (props) => {
           <Route path="cardsite" element={<Cardsite />}></Route>
         </Route>
         <Route path="/portfolio/*" element={<Portfolio info={info} />}>
-          <Route
-            path="single"
-            element={<SingleSite></SingleSite>}
-          ></Route>
+          <Route path="single" element={<SingleSite></SingleSite>}></Route>
         </Route>
         <Route path="/support" element={<Support />}></Route>
         <Route path="/contact" element={<Contact />}></Route>

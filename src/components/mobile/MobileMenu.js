@@ -6,11 +6,11 @@ import { NavLink } from "react-router-dom";
 function MobileMenu(props) {
   const active = {
     color: "rgb(81 200 245)",
-    fontSize: 12
+    fontSize: 12,
   };
   const disactive = {
     color: "black",
-    fontSize: 12
+    fontSize: 12,
   };
 
   const [isOpen, setIsOpen] = useState(false);

@@ -10,20 +10,20 @@ const Cardsite = (props) => {
     targetElement.scrollIntoView({ behavior: "smooth" });
   };
 
-   //перевіряємо розмір вікна
-   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  //перевіряємо розмір вікна
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-   useEffect(() => {
-     function handleResize() {
-       setWindowWidth(window.innerWidth);
-     }
- 
-     window.addEventListener('resize', handleResize);
- 
-     return () => {
-       window.removeEventListener('resize', handleResize);
-     };
-   }, []);
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="cardsite">
@@ -88,56 +88,59 @@ const Cardsite = (props) => {
             </div>
           </div>
         </div>
-       {windowWidth > 600 &&  <a className="arrow" href="#steps" onClick={handleClick}>
-          Етапи створення...
-        </a>}
+        {windowWidth > 600 && (
+          <a className="arrow" href="#steps" onClick={handleClick}>
+            Етапи створення...
+          </a>
+        )}
       </div>
 
-      {windowWidth > 600 &&  <div className="steps" id="steps">
-        <div className="container">
-          <div className="steps-wrap d-flex">
-            <div className="steps-item">
-              <div className="steps-level"></div>
-              <div className="steps-text">
-                <h3>Аналіз</h3>
-                <p>
-                  Досліджуємо тематику вашого бізнесу, аналізуємо конкурентів.
-                </p>
+      {windowWidth > 600 && (
+        <div className="steps" id="steps">
+          <div className="container">
+            <div className="steps-wrap d-flex">
+              <div className="steps-item">
+                <div className="steps-level"></div>
+                <div className="steps-text">
+                  <h3>Аналіз</h3>
+                  <p>
+                    Досліджуємо тематику вашого бізнесу, аналізуємо конкурентів.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="steps-item ">
-              <div className="steps-level"></div>
-              <div className="steps-text">
-                <h3>Дизайн</h3>
-                <p>
-                  Розробляємо дизайн, який залишає яскраве враження про
-                  компанію.
-                </p>
+              <div className="steps-item ">
+                <div className="steps-level"></div>
+                <div className="steps-text">
+                  <h3>Дизайн</h3>
+                  <p>
+                    Розробляємо дизайн, який залишає яскраве враження про
+                    компанію.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="steps-item ">
-              <div className="steps-level"></div>
-              <div className="steps-text">
-                <h3>Розробка</h3>
-                <p>
-                  Робимо сайт з інтерактивним дизайном, динамічними елементами і
-                  адаптивною версткою.
-                </p>
+              <div className="steps-item ">
+                <div className="steps-level"></div>
+                <div className="steps-text">
+                  <h3>Розробка</h3>
+                  <p>
+                    Робимо сайт з інтерактивним дизайном, динамічними елементами
+                    і адаптивною версткою.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="steps-item ">
-              <div className="steps-level"></div>
-              <div className="steps-text">
-                <h3>Запуск</h3>
-                <p>Підтримуємо сайт, допомагаємо управляти контентом.</p>
+              <div className="steps-item ">
+                <div className="steps-level"></div>
+                <div className="steps-text">
+                  <h3>Запуск</h3>
+                  <p>Підтримуємо сайт, допомагаємо управляти контентом.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>}
-     
+      )}
     </div>
   );
 };

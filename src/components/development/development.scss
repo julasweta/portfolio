@@ -20,11 +20,11 @@
 
     @keyframes changeUl {
       0% {
-        color: rgb(231, 20, 20)
+        color: rgb(231, 20, 20);
       }
 
       50% {
-        color: rgb(83, 20, 231)
+        color: rgb(83, 20, 231);
       }
     }
   }
@@ -32,15 +32,12 @@
   hr {
     background-color: cyan;
   }
-
 }
 
 /* RESPONSIVE */
 /* 992px  - 1200px */
 @media screen and (max-width: 1200px) {
-  .development{
+  .development {
     padding-top: 70px;
   }
-
-
 }

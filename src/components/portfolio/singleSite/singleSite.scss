@@ -1,25 +1,22 @@
-.singleSite{
-
-
-  .container{
+.singleSite {
+  .container {
     display: flex;
     flex-direction: column;
- h2 {
-    animation: outblock 3s;
-   text-align: center;
-   font-size: 25px;
-   height: 150px;
- }
-a{
-  font-size: 2rem;
-  color: rgb(115, 171, 206);
-}
- .full-page {
-   margin-top: 10px;
-   width: 600px;
-   height: auto;
-  align-self: center;
- }
+    h2 {
+      animation: outblock 3s;
+      text-align: center;
+      font-size: 25px;
+      height: 70px;
+    }
+    a {
+      font-size: 2rem;
+      color: rgb(115, 171, 206);
+    }
+    .full-page {
+      margin-top: 10px;
+      width: 600px;
+      height: auto;
+      align-self: center;
+    }
   }
-
 }
