@@ -1,7 +1,7 @@
 import "../../development/development-all.scss";
 import "./singleSite.scss";
-import styled, { keyframes } from "styled-components";
-import { fadeIn } from "react-animations";
+import styled, {keyframes} from "styled-components";
+import {fadeIn} from "react-animations";
 
 const FadeIn = styled.div`
   animation: 2s ${keyframes`${fadeIn}`} infinite;
@@ -12,7 +12,7 @@ const SingleSite = (props) => {
     <div className="singleSite">
       <div className="container">
         <h2>{props.info.sites[props.idPost - 1].short}</h2>
-        <FadeIn>
+        <FadeIn className="fadein">
           <a
             href={props.info.sites[props.idPost - 1].homepage}
             target="_blank"
@@ -22,7 +22,7 @@ const SingleSite = (props) => {
           </a>
         </FadeIn>
 
-        <img
+        <img className="full-img"
           src={
             process.env.PUBLIC_URL +
             `/images/${props.info.sites[props.idPost - 1].imgfull}.png`

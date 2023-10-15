@@ -1,3 +1,12 @@
 .contact {
-  background-color: tomato;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  a{
+    margin: 10px;
+    text-decoration: none;
+  }
 }
