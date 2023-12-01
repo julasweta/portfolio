@@ -1,6 +1,5 @@
 {
   "workbench.editor.pinnedTabSizing": "compact",
-  "zenMode.hideTabs": false,
   "workbench.editor.wrapTabs": true,
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#65c89b",

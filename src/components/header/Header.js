@@ -3,7 +3,7 @@ import Image from "react-bootstrap/Image";
 import Logo from "../../resource/logo.jpg";
 import { NavLink } from "react-router-dom";
 import MobileMenu from "../mobile/MobileMenu";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 let active = {
   color: "rgb(81 200 245)",
@@ -11,6 +11,7 @@ let active = {
 let disactive = {
   color: "black",
 };
+
 const Header = (props) => {
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 600px)").matches,
